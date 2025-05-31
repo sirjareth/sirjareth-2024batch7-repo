@@ -52,9 +52,19 @@ public class LoadRegistrationSystem {
                         System.out.println("\nCongratulations! You are "
                                 + "now subscribe to Unli Text for 1 Day!");
                     } else {
-                        System.out.println("Thank you!");
+                        System.out.print("Are you sure that you want to exit? ");
+                        System.out.println("\nYes/No:");
+                        String answer = scanner.nextLine();
+
+                        if (answer.equalsIgnoreCase("yes")) {
+                            System.out.println("*** Thank you! ***");
+                            running = false;
+                        } else {
+                            System.out.println("Go back to main menu...");
+                            // main menu
+                        }
+
                         
-                        running = false;
                     }
                 } else if (choice == 2) {
                     System.out.println("    [1] Subscribe");
@@ -63,8 +73,18 @@ public class LoadRegistrationSystem {
                         System.out.println("\nCongratulations! You are "
                                 + "now subscribe to Unli Text for 1 Day!");
                     } else {
-                        System.out.println("Thank you!");
-                        
+                        System.out.print("Are you sure that you want to exit? ");
+                        System.out.println("\nYes/No:");
+                        String answer = scanner.nextLine();
+
+                        if (answer.equalsIgnoreCase("yes")) {
+                            System.out.println("*** Thank you! ***");
+                            running = false;
+                        } else {
+                            System.out.println("Go back to main menu...");
+                            // main menu
+                        }
+
                         running = false;
                     }
                 } else if (choice == 3) {
@@ -74,7 +94,17 @@ public class LoadRegistrationSystem {
                         System.out.println("\nCongratulations! You are "
                                 + "now subscribe to Unli Text for 1 Day!");
                     } else {
-                        System.out.println("Thank you!");
+                        System.out.print("Are you sure that you want to exit? ");
+                        System.out.println("\nYes/No:");
+                        String answer = scanner.nextLine();
+
+                        if (answer.equalsIgnoreCase("yes")) {
+                            System.out.println("*** Thank you! ***");
+                            running = false;
+                        } else {
+                            System.out.println("Go back to main menu...");
+                            // main menu
+                        }
                         running = false;
                     }
                 }
