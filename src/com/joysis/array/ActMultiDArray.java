@@ -10,8 +10,8 @@ import java.util.Scanner;
 public class ActMultiDArray {
 
     public static void main(String[] args) {
+        
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("===================================");
         System.out.println("\t Average Calculator");
         System.out.println("===================================");
@@ -31,6 +31,9 @@ public class ActMultiDArray {
         }
 
         String[] students = new String[studentCount];
+        
+        
+        
         int[][] grades = new int[studentCount][subjectCount];
 
         // Input student names and their grades per subject
@@ -47,30 +50,30 @@ public class ActMultiDArray {
 
         // Displaying Report
         System.out.println("\n");
-        System.out.println("===================================");
-        System.out.println("\t Grades Report");
-        System.out.println("===================================");
+        System.out.println("======================================================================");
+        System.out.println("\t\t\t Grades Report");
+        System.out.println("======================================================================");
 
         // Header row
-        System.out.printf("%-20s", "Student");
+        System.out.printf("%-20s|", "Student");
         for (String subject : subjects) {
-            System.out.printf("%-10s", subject);
+            System.out.printf("%-10s|", subject);
         }
-        System.out.printf("%-10s\n", "Average");
+        System.out.printf("%-10s|\n", "Average");
         System.out.println("------------------------------------------------------------------");
 
         // Student rows
         for (int i = 0; i < studentCount; i++) {
-            System.out.printf("%-20s", students[i]);
+            System.out.printf("%-20s|", students[i]);
             float sum = 0;
 
             for (int j = 0; j < subjectCount; j++) {
-                System.out.printf("%-10d", grades[i][j]);
+                System.out.printf("%-10d|", grades[i][j]);
                 sum += grades[i][j];
             }
 
             float average = sum / subjectCount;
-            System.out.printf("%-10s\n", average);
+            System.out.printf("%-10s|\n", average);
         }
 
         
