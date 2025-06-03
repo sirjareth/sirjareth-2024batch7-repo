@@ -5,6 +5,8 @@
  */
 package com.joysis.math;
 
+import java.util.Random;
+
 
 public class MathClass {
     
@@ -17,10 +19,21 @@ public class MathClass {
         // i == j
         System.out.println("Lotto Numbers: ");
         for (int i = 0; i < 6; i++) {
-            System.out.println((int) (Math.random() * 75) + 1) ;
+            System.out.println((int) (Math.random() * 58) + 1) ;
         }
         
-        // Loto: 1 - 75
+//        Random random = new Random();
+//        for (int i = 0; i < 6; i++) {
+//            System.out.println((int) (random.nextDouble() * 75) + 1);
+//        }
+        
+        
+        
+        
     }
     
 }
+
+/*
+    
+*/
