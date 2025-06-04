@@ -1,0 +1,138 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.joysis.load_reg_system;
+
+import com.joysis.decision_making.*;
+import java.util.Scanner;
+
+/*
+            Load Registration System
+        
+            1. Text Only
+            2. Call Only
+            3. Call N Text
+            4. Data Only
+ */
+public class LoadRegistrationSystem {
+
+    static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        promptMessage();
+    }
+
+    public static void promptMessage() {
+        System.out.println("=============================");
+        System.out.println("  Load Registration System  ");
+        System.out.println("=============================");
+
+        System.out.println("    [1] Text Only");
+        System.out.println("    [2] Call Only");
+        System.out.println("    [3] Call N Text"); // switch statement
+        System.out.println("    [4] Data Only");
+        System.out.println("    [5] Exit");
+        System.out.print("Select your choice: ");
+        int choice = scanner.nextInt();
+
+        switch (choice) {
+            case 1:
+                textOnlyPromo();
+                break;
+            case 2:
+                callOnlyPromo();
+                break;
+        }
+    }
+
+    public static void textOnlyPromo() {
+        boolean running = true;
+        while (running) {
+            System.out.println("\nText Only Promos:");
+            System.out.println("    [1] 1 Day, P10");
+            System.out.println("    [2] 2 Days, P20");
+            System.out.println("    [3] 5 Days, P70");
+            System.out.print("Enter your choice: ");
+            int textChoice = scanner.nextInt();
+
+            if (textChoice == 1) {
+                subscribeToUnliText(1);
+            } else if (textChoice == 2) {
+                subscribeToUnliText(2);
+            } else if (textChoice == 3) {
+                subscribeToUnliText(5);
+            }
+
+        }
+    }
+
+    public static void subscribeToUnliText(int days) {
+        boolean running = true;
+        while (running) {
+            System.out.println("    [1] Subscribe");
+            System.out.println("    [2] Exit");
+            System.out.print("Enter your choice: ");
+            int choice = scanner.nextInt();
+
+            if (choice == 1) {
+                System.out.println("\nCongratulations! You are "
+                        + "now subscribe to Unli Text for " + days + " Day(s)!");
+            } else {
+                exitConfirmation();
+            }
+        }
+
+    }
+
+    public static void callOnlyPromo() {
+        boolean running = true;
+        while (running) {
+            System.out.println("\nCall Only Promos:");
+            System.out.println("    [1] 1 Day, P20");
+            System.out.println("    [2] 2 Days, P30");
+            System.out.println("    [3] 5 Days, P100");
+            System.out.print("Enter your choice: ");
+            int callChoice = scanner.nextInt();
+
+            switch (callChoice) {
+                case 1:
+                    System.out.println("    [1] Subscribe");
+                    System.out.println("    [2] Exit");
+                    System.out.print("Enter your choice: ");
+                    int subscribeChoice = scanner.nextInt();
+
+                    switch (subscribeChoice) {
+                        case 1:
+                            System.out.println("\nCongratulations! You are "
+                                    + "now subscribe to Unli Text for 1 Day!");
+                            break;
+                        case 2:
+                            System.out.println("** Thank you! **");
+                            running = false;
+                            break;
+                        default:
+                            System.out.println("Invalid Input!");
+                    }
+            }
+        }
+    }
+
+    public static void exitConfirmation() {
+        while (true) {
+            System.out.print("Are you sure that you want to exit? ");
+            System.out.println("\nYes/No:");
+            String answer = scanner.nextLine();
+
+            if (answer.equalsIgnoreCase("yes")) {
+                System.out.println("*** Thank you! ***");
+                System.exit(0);
+            } else {
+                System.out.println("Go back to main menu...");
+                // main menu
+            }
+        }
+
+    }
+}

@@ -19,10 +19,12 @@ public class BingoSimulator {
     O:  61 - 75
     */
     
+    static String letter; // instance variable
+    
     public static void main(String[] args) {
         Random random = new Random();
         
-        String letter;
+        
         int roll = random.nextInt(75) + 1;
         
         if (roll < 16) {
