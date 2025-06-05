@@ -11,29 +11,59 @@ import java.util.Scanner;
 
 public class MethodWed {
     
+    String name;
     
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter your name: ");
-        String name = sc.nextLine();
-        System.out.print("Enter your age: ");
-        int age = sc.nextInt();
-        greet(name, age);
+    public static void a(){
+        
     }
     
-    public static void greet(String name, int age){
-        print("Hello my name is " + name);
-        print("I am " + age + " years old.");
-    }
     
-    public static void print(String word){
-        System.out.println(word);
-    }
+    
+    
+    
+    
+    
+    /* direct / object
+        a           b           result
+        static      static      direct 
+        static      instance    direct
+        instance    static      object
+        instance    instance    direct
+    */
+    
+    
     
 }
 
 
 /*
+    
+    /*
+        Return Type
+        // return type -> data type
+        // return type -> void
+    
+    
+    
+    
+    public static void main(String[] args) {
+        System.out.print("Hello my name is " + fullName());
+        int sum = add();
+        int average = sum / 10;
+    }
+    
+    public static String fullName(){
+        return "Jareth Ronquillo";
+    }
+    
+    public static int add(){
+       return 10 + 10;
+    }
+    
+    public static void sum(){
+       
+    }
+    
     // Method Declaration
     
     // method name naming convention: 
@@ -59,5 +89,27 @@ public class MethodWed {
     public static void add(int a, int b, float c){
        int add = a + b;
         System.out.println(add);
+    }
+
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your name: ");
+        String name = sc.nextLine();
+        System.out.print("Enter your age: ");
+        int age = sc.nextInt();
+        greet(name, age);
+        
+        
+    }
+    
+    public static void greet(String name, int age){
+        print("Hello my name is " + name);
+        print("I am " + age + " years old.");
+    }
+    
+    
+    public static void print(String word){
+        System.out.println(word);
     }
 */
