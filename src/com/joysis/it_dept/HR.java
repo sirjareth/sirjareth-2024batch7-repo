@@ -3,14 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.joysis.methods;
+package com.joysis.it_dept;
 
+import com.joysis.package1.Joysis;
 
-public class Main {
+public class HR extends Joysis{
     
-    public static void b(){
-        MethodWed.a();
+    
+    public static void main(String[] args) {
+        
+        
         
     }
     
 }
+
+/*
+    Subclass / Child Class
+*/

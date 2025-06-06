@@ -5,15 +5,13 @@
  */
 package com.joysis.methods;
 
-import java.util.Scanner;
-
 
 
 public class MethodWed {
     
-    String name;
+    public String name;
     
-    public static void a(){
+    public static void a(){ 
         
     }
     
