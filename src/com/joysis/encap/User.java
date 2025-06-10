@@ -15,7 +15,7 @@ public class User {
     private String address;
     private String companyName;
     
-    public User(){} // default constructor
+    
     
     // setter constructor
     public User(int id, String username, String password,
@@ -27,6 +27,31 @@ public class User {
         this.address = address;
         this.companyName = "Joysis";
     }
+    
+    public User(){
+        this.username = "N/A";
+        this.password = "N/A";
+        this.fullName = "N/A";
+        this.address = "N/A";
+        this.companyName = "N/A";
+    }
+    
+    public User(int id, String username, String password,
+            String fullName){
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.fullName = fullName;
+        this.companyName = "Joysis";
+    }
+    
+    public User(String username, String password){
+        this.username = username;
+        this.password = password;
+        this.companyName = null;
+    }
+    
+    
 
     public String getCompanyName() {
         return companyName;

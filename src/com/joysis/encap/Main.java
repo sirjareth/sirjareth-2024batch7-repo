@@ -12,7 +12,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
-//        User user = new User();
+        User user1 = new User();
+        
+        User user2 = new User(1, "winter", "winter123", "winter summer");
+        User user3 = new User("summer", "summer123");
 //        
 //        System.out.println("* Account Registration Form *");
 //        System.out.print("Enter username: ");
