@@ -3,16 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.joysis.encap;
+package com.joysis.polymorphism;
 
 
-public abstract class Animal {
+public class Animal {
+    
+    public String name;
+    public int ageInMonths;
+    
+    
+    public Animal(String name, int ageInMonths) {
+        this.name = name;
+        this.ageInMonths = ageInMonths;
+    }
+    
     
     public final static double PI = 3.14;
     
-    public final static void eat(){}
+    public void eat(){}
     
     // bawal i override: private, final, static
-    // non-access modifiers: abstract, static, final, 
+    // non-access modifiers: abstract, static, final 
+    
     
 }

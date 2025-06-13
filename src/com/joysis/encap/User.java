@@ -15,8 +15,6 @@ public class User {
     private String address;
     private String companyName;
     
-    
-    
     // setter constructor
     public User(int id, String username, String password,
             String fullName, String address){
